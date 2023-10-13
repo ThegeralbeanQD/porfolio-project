@@ -1,0 +1,87 @@
+@use '../abstracts/variables' as v;
+@use '../base/breakpoints' as b;
+
+.header {
+  padding: v.$lg-padding;
+  padding-bottom: 5rem;
+  background-color: v.$secondary-clr;
+  color: white;
+  width: 100%;
+  position: relative;
+
+  @include b.md {
+    top: 20px;
+    padding-bottom: 3rem;
+  }
+
+  @include b.lg {
+    padding-bottom: 7rem;
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &--primary-start{
+    color: v.$primary-clr;
+  }
+
+  &--content-wraper {
+    position: relative;
+  }
+
+  &--secondary {
+    margin-top: 1rem;
+    position: relative;
+    display: inline-block;
+
+    @include b.sm {
+      margin-top: 2rem;
+    }
+
+    @include b.md {
+      position: absolute;
+      bottom: -50px;
+      right: 100px;
+    }
+
+    @include b.lg {
+      bottom: -90px;
+      right: -150px;
+    }
+
+
+    &-main {
+      font-weight: 400;
+      letter-spacing: 5px;
+    }
+
+    &-sub {
+      font-weight: 400;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+
+      position: absolute;
+      bottom: -25px;
+      right: -30px;
+
+      @include b.xs {
+        right: -60px;
+      }
+
+      @include b.md {
+        bottom: -35px;
+        font-size: 1.6rem;
+      }
+
+      @include b.lg {
+        font-size: 1.8rem;
+      }
+
+      @include b.xl {
+        font-size: 2rem;
+      }
+    }
+  }
+}
