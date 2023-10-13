@@ -5,6 +5,8 @@ This project is the first time i've attempted to produce a portfolio since becom
 To run this project and see what it looks like you will need to: 
 ```bash
 npm install
+```
+```bash
 npm run dev
 ```
 
