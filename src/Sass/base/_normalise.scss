@@ -1,4 +1,5 @@
 @use './breakpoints' as b;
+@use '../abstracts/variables' as v;
 
 *,
 *::before,
@@ -19,7 +20,9 @@ html{
    scroll-behavior: auto;
   }
 }
-
+body{
+  background-color: v.$background-clr;
+}
 input,
 button,
 textarea,
@@ -42,7 +45,7 @@ select {
     max-width: 425px;
   }
   @include b.md{
-    max-width: 768px;
+    max-width: 650px;
   }
   @include b.lg{
     max-width: 1024px;
