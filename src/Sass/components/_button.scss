@@ -1,0 +1,16 @@
+@use '../base/breakpoints' as b;
+@use '../abstracts/variables' as v;
+
+button{
+  font-family: v.$quicksand-font;
+  font-size: 1.6rem;
+  min-width: 3rem;
+  padding: 0.3em 1em;
+  border: none;
+  @include b.md {
+    font-size: 1.8rem;
+  }
+  @include b.lg {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,66 @@
+@use './breakpoints' as b;
+@use '../abstracts/variables' as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Quicksand:wght@400;500;700&display=swap');
+
+p{
+  font-size: 1.6rem;
+  font-family: v.$quicksand-font;
+  line-height: 1.6;
+
+  @include b.md{
+    font-size: 1.8rem;
+  }
+  @include b.xl{
+    font-size: 2rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4{
+  font-family: v.$oswald-font;
+  line-height: 1.35;
+}
+
+h1{
+  font-size: 6.734rem;
+  @include b.md{
+    font-size: 7.576rem;
+  }
+  @include b.xl{
+    font-size: 8.417rem;
+  }
+}
+
+h2{
+  font-size: 5.052rem;
+  @include b.md{
+    font-size: 5.683rem;
+  }
+  @include b.xl{
+    font-size: 6.315rem;
+  }
+}
+
+h3{
+  font-size: 3.79rem;
+  @include b.md{
+    font-size: 4.263rem;
+  }
+  @include b.xl{
+    font-size: 4.737rem;
+  }
+}
+
+h4{
+  font-size: 2.843rem;
+  @include b.md{
+    font-size: 3.198rem;
+  }
+  @include b.xl{
+    font-size: 3.554rem;
+  }
+}
+
