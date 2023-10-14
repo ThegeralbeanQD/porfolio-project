@@ -27,6 +27,10 @@
       align-items: center;
     }
   }
+
+  &__primary{
+    animation: fade-in-left 1s;
+  }
   
 
   &__primary-start{
@@ -41,6 +45,7 @@
     margin-top: 1rem;
     position: relative;
     display: inline-block;
+    animation: fade-in-right 1s;
 
     @include b.sm {
       margin-top: 2rem;
@@ -89,5 +94,27 @@
         font-size: 2rem;
       }
     }
+  }
+}
+
+@keyframes fade-in-left {
+  0%{
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  0%{
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
   }
 }

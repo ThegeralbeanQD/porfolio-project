@@ -21,9 +21,11 @@
     border-radius: 50%;
     color: rgb(65, 65, 65);
     transition: all 200ms ease-out;
+    // animation: wobble 1s;
 
     &-active{
       bottom: 195px;
+      animation: wobble 1s;
     }
   }
 
@@ -75,4 +77,14 @@
       }
     }
   }
+}
+
+@keyframes wobble {
+  0% { transform: translateY(0%); }
+  15% { transform: translateY(-25%) }
+  30% { transform: translateY(20%)  }
+  45% { transform: translateY(-15%) }
+  60% { transform: translateY(10%)  }
+  75% { transform: translateY(-5%)  }
+  100% { transform: translateY(0%); }
 }
