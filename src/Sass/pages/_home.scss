@@ -22,7 +22,7 @@
     }
   
     @include b.lg {
-      padding-bottom: 7rem;
+      padding-bottom: 10rem;
     }
   }
 
@@ -35,7 +35,7 @@
   }
 
   &__primary{
-    animation: fade-in-left 1s;
+    animation: fade-in-left 1s;      
   }
   
 
@@ -130,13 +130,15 @@
 
     &-btn-wrapper{
       width: 100%;
+      @include b.md{margin-top: 2rem;}
     }
 
     &-btn{
-      width: 100%;
+      width: 90%;
       max-width: 320px;
       margin: v.$margin;
       padding: v.$lg-padding;
+      text-transform: uppercase;
 
       @include b.sm{
         width: calc(100%/2 - 2rem);
@@ -148,7 +150,7 @@
           max-width: 250px;
         }
         &:last-of-type{
-          max-width: 190px;
+          max-width: 200px;
         }
       }
 

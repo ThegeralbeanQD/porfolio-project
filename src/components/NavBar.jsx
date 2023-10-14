@@ -8,12 +8,12 @@ const NavBar = () => {
 
   return (
     <>
+      <button
+        onClick={click}
+        className={active ? 'navbar__button navbar__button active' : 'navbar__button'}
+      >=</button>
       <nav className={active ? 'navbar active' : 'navbar'}>
-        <button
-          onClick={click}
-          className={active ? 'navbar__button navbar__button active' : 'navbar__button'}
-        >=</button>
-        <ul className={active ? 'navbar__list navbar__list active' :'navbar__list' }>
+        <ul className={active ? 'navbar__list navbar__list active' : 'navbar__list'}>
           <li className='navbar__list-item'>Projects</li>
           <li className='navbar__list-item navbar__list-item-deco'>About Me</li>
           <li className='navbar__list-item'>Contact</li>
