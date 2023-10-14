@@ -1,7 +1,7 @@
 import { InfinateScroller } from "../components"
 
 const HomePage = () => {
-  // const click = () => alert('clicked')
+  const click = () => alert('clicked')
   return (
     <>
       <header className="header">
@@ -17,7 +17,14 @@ const HomePage = () => {
           </div>
         </div>
         <div className="container">
-          <InfinateScroller/>
+          <InfinateScroller />
+        </div>
+        <div className="header__cta">
+          <p className="header__cta-content">psychology graduate turned passionate software developer</p>
+          <div className="header__cta-btn-wrapper">
+            <button onClick={click} className="header__cta-btn header__cta-btn--primary">my work</button>
+            <button onClick={click} className="header__cta-btn header__cta-btn--secondary">Learn more</button>
+          </div>
         </div>
       </header>
     </>

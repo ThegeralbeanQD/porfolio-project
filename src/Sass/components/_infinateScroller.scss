@@ -24,7 +24,7 @@ $item-gap: 1.6rem;
   &[data-animated=true] .scroller__inner {
     width: fit-content;
     flex-wrap: nowrap;
-    animation: scroll 30s linear infinite;
+    animation: scroll 30s linear infinite 1s;
 
     &:hover{
       animation-play-state: paused;
@@ -34,7 +34,6 @@ $item-gap: 1.6rem;
   &__list {
 
     &-item {
-      // background-color: rgb(49, 68, 68);
       padding: v.$lg-padding;
       border-radius: 5px;
 

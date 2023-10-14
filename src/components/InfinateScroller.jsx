@@ -30,7 +30,7 @@ const InfinateScroller = () => {
   return (
     <div className="scroller" ref={scrollerRef}>
       <ul className="scroller__list scroller__inner" ref={scrollerInnerRef}>
-      <li className="scroller__list-item">
+        <li className="scroller__list-item">
           <img className="scroller__list-item-image" src="/tech-images/html.png" alt="html logo" />
         </li>
         <li className="scroller__list-item">

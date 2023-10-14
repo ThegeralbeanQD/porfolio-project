@@ -2,6 +2,9 @@
 @use '../base/breakpoints' as b;
 
 .header {
+  height: 100vh;
+  height: 100svh;
+  position: relative;
 
   &__hero-wrapper{  
     padding: v.$lg-padding;
@@ -95,6 +98,66 @@
 
       @include b.xl {
         font-size: 2rem;
+      }
+    }
+  }
+
+  &__cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    margin: v.$lg-margin;
+    
+    @include b.md{
+      margin-top: 5rem;
+    }
+
+    &-content{
+      max-width: 300px;
+      margin-block: v.$lg-margin;
+      
+      @include b.md{
+        max-width: 400px;
+      }
+
+      @include b.lg{
+        max-width: 100%;
+      }
+    }
+
+    &-btn-wrapper{
+      width: 100%;
+    }
+
+    &-btn{
+      width: 100%;
+      max-width: 320px;
+      margin: v.$margin;
+      padding: v.$lg-padding;
+
+      @include b.sm{
+        width: calc(100%/2 - 2rem);
+        display: inline;
+      }
+
+      @include b.md {
+        &:first-of-type{
+          max-width: 250px;
+        }
+        &:last-of-type{
+          max-width: 190px;
+        }
+      }
+
+      &--primary{
+        background-color: v.$primary-clr;
+      }
+
+      &--secondary{
+        background-color: v.$white-clr;
       }
     }
   }
