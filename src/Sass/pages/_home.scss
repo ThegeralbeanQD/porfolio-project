@@ -3,29 +3,31 @@
 
 .header {
 
+  &__hero-wrapper{  
+    padding: v.$lg-padding;
+    padding-bottom: 5rem;
+    background-color: v.$secondary-clr;
+    color: white;
+    width: 100%;
+    position: relative;
 
-  padding: v.$lg-padding;
-  padding-bottom: 5rem;
-  background-color: v.$secondary-clr;
-  color: white;
-  width: 100%;
-  position: relative;
-
-  &__hero-wrapper{}
+    @include b.md {
+      padding-bottom: 3rem;
+    }
   
-  @include b.md {
-    top: 20px;
-    padding-bottom: 3rem;
+    @include b.lg {
+      padding-bottom: 7rem;
+    }
   }
 
   @include b.lg {
-    padding-bottom: 7rem;
     &__content-flex {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
   }
+  
 
   &__primary-start{
     color: v.$primary-clr;
