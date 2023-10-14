@@ -1,0 +1,75 @@
+@use '../abstracts/variables' as v;
+
+.navbar{
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 175px;
+
+  &__button{
+    z-index: 99;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: v.$secondary-clr;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    padding: 0;
+    border-radius: 50%;
+    color: white;
+    transition: all 200ms ease-out;
+
+    &-active{
+      bottom: 195px;
+    }
+  }
+
+  &__list{
+    background-color: aliceblue;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: all 150ms ease-out;
+
+    &-active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    &-item{
+      font-size: 20px;
+      font-family: v.$quattro-font;
+      text-transform: uppercase;
+
+      &-deco{
+        position: relative;
+
+        &::before{
+          content: '';
+          width: 70vw;
+          height: 1px;
+          background-color: rgba(0, 0, 0, 0.211);
+          position: absolute;
+          top: -80%;
+          left: 50%;
+          transform: translate(-50%, 50%);
+        }
+        &::after{
+          content: '';
+          width: 70vw;
+          height: 1px;
+          background-color: rgba(0, 0, 0, 0.211);
+          position: absolute;
+          bottom: -80%;
+          left: 50%;
+          transform: translate(-50%, 50%);
+        }
+      }
+    }
+  }
+}

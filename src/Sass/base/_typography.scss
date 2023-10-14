@@ -1,7 +1,36 @@
 @use './breakpoints' as b;
 @use '../abstracts/variables' as v;
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Quicksand:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Quattrocento+Sans:wght@400;700&family=Quicksand:wght@400;500;700&display=swap');
+
+$font-size: (
+  small: 1.4rem,
+  medium: 1.6rem,
+  large: 1.8rem,
+  xlarge: 2rem,
+);
+
+@include b.base {
+  body{
+    font-size: map-get($font-size, small);
+  }
+}
+
+@include b.xs {
+  body {
+    font-size: map-get($font-size, medium);
+  }
+}
+@include b.md {
+  body {
+    font-size: map-get($font-size, large);
+  }
+}
+@include b.xl {
+  body {
+    font-size: map-get($font-size, xlarge);
+  }
+}
 
 p{
   font-size: 1.4rem;

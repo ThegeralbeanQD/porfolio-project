@@ -2,6 +2,8 @@
 @use '../base/breakpoints' as b;
 
 .header {
+
+
   padding: v.$lg-padding;
   padding-bottom: 5rem;
   background-color: v.$secondary-clr;
@@ -9,6 +11,8 @@
   width: 100%;
   position: relative;
 
+  &__hero-wrapper{}
+  
   @include b.md {
     top: 20px;
     padding-bottom: 3rem;
