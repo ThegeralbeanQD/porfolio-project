@@ -16,22 +16,22 @@
 
   @include b.lg {
     padding-bottom: 7rem;
-    .main {
+    &__content-flex {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
   }
 
-  &--primary-start{
+  &__primary-start{
     color: v.$primary-clr;
   }
 
-  &--content-wraper {
+  &__content-wraper {
     position: relative;
   }
 
-  &--secondary {
+  &__secondary {
     margin-top: 1rem;
     position: relative;
     display: inline-block;

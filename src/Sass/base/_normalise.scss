@@ -23,6 +23,11 @@ html{
 body{
   background-color: v.$background-clr;
 }
+
+li{
+  list-style: none;
+}
+
 input,
 button,
 textarea,
