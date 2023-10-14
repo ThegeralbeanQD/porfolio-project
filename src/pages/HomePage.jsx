@@ -1,4 +1,4 @@
-
+import { InfinateScroller } from "../components"
 
 const HomePage = () => {
   // const click = () => alert('clicked')
@@ -15,6 +15,9 @@ const HomePage = () => {
               </h4>
             </div>
           </div>
+        </div>
+        <div className="container">
+          <InfinateScroller/>
         </div>
       </header>
     </>

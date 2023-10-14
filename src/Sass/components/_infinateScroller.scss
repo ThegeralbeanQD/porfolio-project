@@ -1,0 +1,59 @@
+@use '../abstracts/variables' as v;
+
+$item-gap: 1.6rem;
+
+.scroller {
+  max-width: 800px;
+  margin-inline: auto;
+
+  &[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+        transparent,
+        v.$background-clr 20%,
+        v.$background-clr 80%,
+        transparent);
+    mask: linear-gradient(90deg,
+        transparent,
+        v.$background-clr 20%,
+        v.$background-clr 80%,
+        transparent);
+  }
+
+  &[data-animated=true] .scroller__inner {
+    width: fit-content;
+    flex-wrap: nowrap;
+    animation: scroll 30s linear infinite;
+
+    &:hover{
+      animation-play-state: paused;
+    }
+  }
+
+  &__list {
+
+    &-item {
+      // background-color: rgb(49, 68, 68);
+      padding: v.$lg-padding;
+      border-radius: 5px;
+
+      &-image{
+        height: 50px;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    gap: $item-gap;
+    flex-wrap: wrap;
+
+    padding-block: v.$padding;
+  }
+}
+
+@keyframes scroll {
+  to{
+    transform: translateX(calc(-50% - $item-gap/2));
+  }
+}
