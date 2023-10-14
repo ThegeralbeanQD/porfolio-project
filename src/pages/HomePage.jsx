@@ -27,6 +27,10 @@ const HomePage = () => {
           </div>
         </div>
       </header>
+
+      <section className="featured">
+        
+      </section>
     </>
   )
 }
