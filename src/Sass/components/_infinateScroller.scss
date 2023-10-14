@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as v;
+@use '../base/breakpoints' as b;
 
 $item-gap: 1.6rem;
 
@@ -38,7 +39,14 @@ $item-gap: 1.6rem;
       border-radius: 5px;
 
       &-image{
-        height: 50px;
+        height: 30px;
+
+        @include b.md{
+          height: 40px;
+        }
+        @include b.lg{
+          height: 50px;
+        }
       }
     }
   }
