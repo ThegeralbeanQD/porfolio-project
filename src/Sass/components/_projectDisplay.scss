@@ -1,0 +1,58 @@
+@use '../abstracts/variables' as v;
+
+.project{
+
+  &__title{
+    text-transform: uppercase;
+    margin-block: v.$margin;
+  }
+
+  &__tech-stack{
+    margin-block: v.$lg-margin;
+
+    &-img{
+      max-height: 40px;
+    }
+  }
+
+  &__content{
+    margin-block: v.$margin;
+    min-height: 200px;
+
+    &-btn{
+      display: inline;
+      background-color: rgba(255, 255, 255, 0);
+      padding: 0;
+      margin: 0;
+      margin-left: 0.5rem;
+      color: v.$primary-clr;
+      transition: all 200ms;
+
+      &:hover{
+        color: rgba(v.$primary-clr, 0.5);
+      }
+    }
+  }
+
+  &__action-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    margin-block: v.$lg-margin;
+  }
+
+  &__btn{
+
+    &.view{
+      background-color: v.$primary-clr;
+      padding: v.$lg-padding;
+      width: clamp(150px, 40% ,200px);
+    }
+
+    &-image{
+      max-height: 40px;
+      font-size: 35px;
+    }
+  }
+}

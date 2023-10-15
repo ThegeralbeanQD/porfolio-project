@@ -2,12 +2,12 @@
 @use '../base/breakpoints' as b;
 
 .header {
-  height: 100vh;
-  height: 100svh;
+  // height: 100vh;
+  // height: 100svh;
   position: relative;
 
   &__hero-wrapper{  
-    padding: v.$lg-padding;
+    padding-top: v.$lg-padding;
     padding-bottom: 5rem;
     background-color: v.$secondary-clr;
     color: white;
@@ -165,10 +165,14 @@
   }
 }
 
+.featured{
+  margin-block: 2rem;
+}
+
 @keyframes fade-in-left {
   0%{
     opacity: 0;
-    transform: translateX(-150px);
+    transform: translateX(-80px);
   }
   100%{
     opacity: 1;
@@ -179,7 +183,7 @@
 @keyframes fade-in-right {
   0%{
     opacity: 0;
-    transform: translateX(150px);
+    transform: translateX(80px);
   }
   100%{
     opacity: 1;

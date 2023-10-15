@@ -1,0 +1,46 @@
+{
+  "csharp": {
+    "name": "C#",
+    "imageURL": "/tech-images/csharp.png"
+  },
+  "html": {
+    "name": "HTML",
+    "imageURL": "/tech-images/html.png"
+  },
+  "css": {
+    "name": "CSS",
+    "imageURL": "/tech-images/css.png"
+  },
+  "express": {
+    "name": "Express",
+    "imageURL": "/tech-images/express.png"
+  },
+  "javascript": {
+    "name": "JavaScript",
+    "imageURL": "/tech-images/javascript.png"
+  },
+  "jest": {
+    "name": "Jest",
+    "imageURL": "/tech-images/jest.png"
+  },
+  "node": {
+    "name": "Node.js",
+    "imageURL": "/tech-images/node.png"
+  },
+  "react": {
+    "name": "React",
+    "imageURL": "/tech-images/react.png"
+  },
+  "sass": {
+    "name": "Sass",
+    "imageURL": "/tech-images/sass.png"
+  },
+  "vite": {
+    "name": "Vite",
+    "imageURL": "/tech-images/vite.png"
+  },
+  "hostinger": {
+    "name": "Hostinger",
+    "imageURL": "/tech-images/hostinger.png"
+  }
+}

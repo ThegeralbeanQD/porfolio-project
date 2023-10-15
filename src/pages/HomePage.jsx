@@ -1,4 +1,4 @@
-import { InfinateScroller } from "../components"
+import * as c from "../components"
 
 const HomePage = () => {
   const click = () => alert('clicked')
@@ -17,11 +17,11 @@ const HomePage = () => {
           </div>
         </div>
         <div className="container">
-          <InfinateScroller />
+          <c.InfinateScroller />
         </div>
         <div className="header__cta">
           <p className="header__cta-content">psychology graduate turned passionate software developer</p>
-          <div className="header__cta-btn-wrapper">
+          <div className="header__cta-btn-wrapper container">
             <button onClick={click} className="header__cta-btn header__cta-btn--primary">my work</button>
             <button onClick={click} className="header__cta-btn header__cta-btn--secondary">Learn more</button>
           </div>
@@ -29,7 +29,15 @@ const HomePage = () => {
       </header>
 
       <section className="featured">
-        
+        <div className="container">
+          <c.ProjectDisplay
+            title='I-chai'
+            role ='Frontend Developer'
+            tech={['react', 'hostinger']}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas nesciunt consequatur praesentium eveniet beatae mollitia minus aliquid rem eius numquam veritatis odio adipisci explicabo porro, natus obcaecati doloremque ipsa.
+          </c.ProjectDisplay>
+        </div>
       </section>
     </>
   )
