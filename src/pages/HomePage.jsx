@@ -35,7 +35,7 @@ const HomePage = () => {
             role ='Frontend Developer'
             tech={['react', 'hostinger']}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas nesciunt consequatur praesentium eveniet beatae mollitia minus aliquid rem eius numquam veritatis odio adipisci explicabo porro, natus obcaecati doloremque ipsa.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas nesciunt consequatur praesentium eveniet beatae mollitia minus aliquid rem eius numquam veritatis odio adipisci explicabo porro, natus obcaecati doloremque ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam natus inventore ex provident reprehenderit ipsam expedita accusamus adipisci. Quos autem deleniti, dolor officiis doloremque facilis laudantium porro voluptatum quo consequatur debitis, iusto, ducimus voluptas error minus molestias quaerat molestiae eligendi repudiandae voluptatem incidunt eaque eius magnam? Dolorem facere laudantium similique. Praesentium laudantium corrupti fugit dolorum vitae perferendis necessitatibus, reprehenderit hic! Consectetur maxime voluptatibus ab labore laudantium, ut culpa doloremque repellendus molestiae magnam dolorum nam.
           </c.ProjectDisplay>
         </div>
       </section>
