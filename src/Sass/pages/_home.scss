@@ -226,6 +226,14 @@
     margin-block: v.$lg-margin;
     text-align: center;
 
+    @include b.md{
+      text-align: left;
+    }
+
+    @include b.lg{
+      text-align: center;
+    }
+
     @include b.font-contain{
       font-size: 3.5rem;
     }
@@ -324,7 +332,7 @@
 
     &__content{
       @include b.lg{
-        max-width: 65ch;
+        max-width: 75ch;
         margin: 0 auto;
         text-align: left;
       }
