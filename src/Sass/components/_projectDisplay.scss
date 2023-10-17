@@ -3,19 +3,21 @@
 
 
 .project {
-  margin-inline: auto;
   max-width: 750px;
-  margin-block: 10rem;
+  margin-block: 6rem;
   position: relative;
+  margin-inline: auto;
+  text-align: left;
 
-  margin-bottom: 100rem;
 
   &::after {
     content: '';
-    width: 100%;
+    width: 70%;
     height: 2px;
     background-color: v.$secondary-clr;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
   &__title {
@@ -32,13 +34,34 @@
   }
 
   &__tech-stack {
-    margin-block: v.$lg-margin + 1.5rem;
+    margin-block: v.$lg-margin + (1.5rem);
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+
+    &-img-wrapper{
+      position: relative;
+
+      &:hover::before{
+        transform: translate(-50%, 0) scale(1);
+      }
+
+      &::before{
+        content: attr(data-tech-name);
+        text-transform: uppercase;
+        position: absolute;
+        top: -55px;
+        left: 50%;
+        background-color: rgb(v.$secondary-clr, 0.7);
+        padding: v.$padding;
+        border-radius: 10px;
+        transform: translate(-50%, 0) scale(0);
+        transition: all 200ms;
+      }
+    }
 
     &-img {
       max-height: 40px;
-
     }
   }
 
@@ -84,7 +107,7 @@
             v.$background-clr 85%,
             transparent);
         padding-right: v.$padding;
-        padding-block: v.$lg-padding +1rem;
+        padding-block: v.$lg-padding (+ 1rem);
 
         @include b.xs {
           max-height: 185px;

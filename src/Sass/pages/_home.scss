@@ -10,7 +10,7 @@
     padding-top: v.$lg-padding;
     padding-bottom: 5rem;
     background-color: v.$secondary-clr;
-    color: white;
+    color: v.$white-clr;
     width: 100%;
     position: relative;
     margin-bottom: v.$margin;
@@ -166,7 +166,145 @@
 }
 
 .featured{
-  margin-block: 2rem;
+  margin-block: 10rem;
+  position: relative;
+  text-align: center;
+
+  &::before{
+    content: '';
+    width: 75%;
+    height: 2px;
+    background-color: v.$secondary-clr;
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translate(-50% ,0);
+  }
+  &::after{
+    content: '';
+    width: 75%;
+    height: 2px;
+    background-color: v.$secondary-clr;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translate(-50% ,0);
+  }
+
+  &__title{
+    text-align: center;
+    @include b.font-contain{
+      font-size: 3.5rem;
+    }
+  }
+
+  &__project-link{
+    text-align: center;
+    display:inline-block;
+    text-decoration: none;
+    color: v.$white-clr;
+    text-transform: uppercase;
+    transition: all 200ms;
+
+    @include b.lg{
+      &:hover{
+        color: rgba(v.$white-clr, 0.5);
+      }
+    }
+  }
+}
+
+.bio{
+
+  margin-block: v.$lg-margin;
+  margin-bottom: 4rem;
+  padding: v.$lg-padding;
+
+  background-color: v.$secondary-clr;
+
+  &__title{
+    margin-block: v.$lg-margin;
+    text-align: center;
+
+    @include b.font-contain{
+      font-size: 3.5rem;
+    }
+  }
+
+  &__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include b.md{
+      flex-direction: row;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    @include b.lg{
+      max-width: 1008px;
+      margin: 0 auto;
+    }
+
+    @include b.xl{
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+
+    &-content-image{
+      max-width: 80%;
+
+      @include b.md{
+        max-width: 40%;
+      }
+
+      @include b.lg{
+        max-width: 250px;
+      }
+      @include b.xl{
+        max-width: 320px;
+      }
+    }
+
+    &-content{
+      
+      @include b.md{
+        max-width: 55%;
+      }
+      
+      &-span{
+        display: block;
+        margin-top: v.$lg-margin;
+
+        @include b.xl{
+          margin-top: v.$lg-margin + 3rem;
+        }
+      }
+    }
+
+    &-content-cta{
+      width: 80%;
+      padding: v.$lg-padding;
+      margin-block: v.$lg-margin;
+      text-transform: uppercase;
+
+      @include b.md{
+        order: 10;
+        position: relative;
+        left: -160px;
+        max-width: 300px;
+      }
+      @include b.lg{
+        left: -261px;
+      }
+      @include b.xl{
+        left: -351px;
+        max-width: 320px;
+      }
+    }
+  }
 }
 
 @keyframes fade-in-left {

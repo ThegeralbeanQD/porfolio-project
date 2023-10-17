@@ -7,10 +7,10 @@ const ProjectDisplay = ({ title, role, tech, children, github }) => {
 
   const techToRender = Array.isArray(tech)
     ? tech.map((techName, index) => techList[techName] && (
-      <img key={index} src={techList[techName].imageURL} alt={`${index} image`} className='project__tech-stack-img' />
+      <div  key={index} className='project__tech-stack-img-wrapper' data-tech-name={techName}> <img src={techList[techName].imageURL} alt={`${index} image`} className='project__tech-stack-img'/> </div>
     ))
     : techList[tech] && (
-      <img src={techList[tech].imageURL} alt={`image`} className='project__tech-stack-img' />
+      <div data-tool-tip={techList[tech].name} data-tech-name={techList[tech].name} className='project__tech-stack-img-wrapper' ><img src={techList[tech].imageURL} alt={`${techList[tech].name} image`} className='project__tech-stack-img' /></div>
     );
 
   const toggleContentVisibility = () => {
@@ -21,7 +21,7 @@ const ProjectDisplay = ({ title, role, tech, children, github }) => {
 
   return (
     <div className="project">
-      <h3 className="project__title">{title} - <span className='project__title-role'>{role}</span></h3>
+      <h4 className="project__title">{title} - <span className='project__title-role'>{role}</span></h4>
       <div className="project__tech-stack">
         {techToRender}
       </div>

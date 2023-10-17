@@ -30,13 +30,38 @@ const HomePage = () => {
 
       <section className="featured">
         <div className="container">
+          <h2 className="featured__title">Featured Projects</h2>
           <c.ProjectDisplay
             title='I-chai'
-            role ='Frontend Developer'
+            role='Frontend Developer'
             tech={['react', 'hostinger']}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas nesciunt consequatur praesentium eveniet beatae mollitia minus aliquid rem eius numquam veritatis odio adipisci explicabo porro, natus obcaecati doloremque ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam natus inventore ex provident reprehenderit ipsam expedita accusamus adipisci. Quos autem deleniti, dolor officiis doloremque facilis laudantium porro voluptatum quo consequatur debitis, iusto, ducimus voluptas error minus molestias quaerat molestiae eligendi repudiandae voluptatem incidunt eaque eius magnam? Dolorem facere laudantium similique. Praesentium laudantium corrupti fugit dolorum vitae perferendis necessitatibus, reprehenderit hic! Consectetur maxime voluptatibus ab labore laudantium, ut culpa doloremque repellendus molestiae magnam dolorum nam.
           </c.ProjectDisplay>
+          <c.ProjectDisplay
+            title='Bump'
+            role='Fullstack developer'
+            tech={['react', 'mongodb', 'node', 'jest', 'vite', 'figma']}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas nesciunt consequatur praesentium eveniet beatae mollitia minus aliquid rem eius numquam veritatis odio adipisci explicabo porro, natus obcaecati doloremque ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam natus inventore ex provident reprehenderit ipsam expedita accusamus adipisci. Quos autem deleniti, dolor officiis doloremque facilis laudantium porro voluptatum quo consequatur debitis, iusto, ducimus voluptas error minus molestias quaerat molestiae eligendi repudiandae voluptatem incidunt eaque eius magnam? Dolorem facere laudantium similique. Praesentium laudantium corrupti fugit dolorum vitae perferendis necessitatibus, reprehenderit hic! Consectetur maxime voluptatibus ab labore laudantium, ut culpa doloremque repellendus molestiae magnam dolorum nam.
+          </c.ProjectDisplay>
+          <a href="" className="featured__project-link"> view more</a>
+        </div>
+      </section>
+
+      <section className="bio">
+        <div className="container">
+          <h2 className="bio__title">WHO IS GERALDINE</h2>
+          <div className="bio__body">
+            <img src="/images/graduationPhoto.jpg" alt="picture at graduation" className="bio__body-content-image" />
+            <button className="bio__body-content-cta primary-btn">view resume</button>
+            <p className="bio__body-content">
+              Born Gi Qui Geraldine Ho, I grew up surrounded by technology and most of my hobbies to this day involve technology in one form or another.
+              <span className="bio__body-content-span">
+                I studied psychology and during my final year I was given the opportunity to combine psychology and technology which was a turning point for my career aspirations. Now my goals are to code and I hope to use technology for learning.
+              </span>
+            </p>
+          </div>
         </div>
       </section>
     </>

@@ -60,6 +60,15 @@ const InfinateScroller = () => {
         <li className="scroller__list-item">
           <img className="scroller__list-item-image" src="/tech-images/jest.png" alt="jest logo" />
         </li>
+        <li className="scroller__list-item">
+          <img className="scroller__list-item-image" src="/tech-images/mongodb.png" alt="mongodb logo" />
+        </li>
+        <li className="scroller__list-item">
+          <img className="scroller__list-item-image" src="/tech-images/sql.png" alt="sql logo" />
+        </li>
+        <li className="scroller__list-item">
+          <img className="scroller__list-item-image" src="/tech-images/figma.png" alt="figma logo" />
+        </li>
       </ul>
     </div>
   )

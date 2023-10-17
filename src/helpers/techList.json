@@ -42,5 +42,17 @@
   "hostinger": {
     "name": "Hostinger",
     "imageURL": "/tech-images/hostinger.png"
+  },
+  "mongodb": {
+    "name": "MongoDB",
+    "imageURL": "/tech-images/mongodb.png"
+  },
+  "sql": {
+    "name": "SQL",
+    "imageURL": "/tech-images/sql.png"
+  },
+  "figma": {
+    "name": "Figma",
+    "imageURL": "/tech-images/figma.png"
   }
 }

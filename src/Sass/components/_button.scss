@@ -13,4 +13,7 @@ button{
   @include b.lg {
     font-size: 2rem;
   }
+  &.primary-btn{
+    background-color: v.$primary-clr;
+  }
 }

@@ -24,7 +24,7 @@ $item-gap: 1.6rem;
   &[data-animated=true] .scroller__inner {
     width: fit-content;
     flex-wrap: nowrap;
-    animation: scroll 30s linear infinite 1s;
+    animation: scroll 40s linear infinite 1s;
 
     &:hover{
       animation-play-state: paused;

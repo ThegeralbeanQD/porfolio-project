@@ -49,3 +49,9 @@ $breakpoints: (
   }
 }
 
+@mixin font-contain {
+  @media (max-width:330px) {
+    @content
+  }
+}
+
