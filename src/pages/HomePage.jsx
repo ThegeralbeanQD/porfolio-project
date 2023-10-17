@@ -68,7 +68,7 @@ const HomePage = () => {
       <section className="bio-sub">
         <div className="container">
           <div className="bio-sub__body">
-            <h3  className="bio-sub__title">WHY YOU <span className="bio-sub__title-span">SHOULD WORK WITH ME</span></h3>
+            <h3 className="bio-sub__title">WHY YOU <span className="bio-sub__title-span">SHOULD WORK WITH ME</span></h3>
             <p className="bio-sub__content"> Although I am young I have a lot of knowledge I’m excited use and continue to learn. Being fresh out of university, my drive and motivation for contributing to a big project is unparalleled. My strong work ethic and interest in my skills is shown in every aspect of my life (just ask my friends and family... i think they’re getting sick of me) and I want to show YOU.
               Check out my resume to find out more!</p>
           </div>
@@ -81,6 +81,13 @@ const HomePage = () => {
             <div className="bio-sub__misc-wrapper"> <img className="bio-sub__misc-icon" src="/images/pride.png" alt="" /> <p>A proud member of the LGBTQ+ community. </p></div>
             <div className="bio-sub__misc-wrapper"> <img className="bio-sub__misc-icon" src="/images/sdg.png" alt="" /> <p>Advocate for Sustainable Development Goals - Click here to view my university project.</p></div>
           </div>
+        </div>
+      </section>
+
+      <section className="links">
+        <h4 className="links__title">THIS SITE WAS MADE WITH</h4>
+        <div className="container">
+          <c.FanCard />
         </div>
       </section>
     </>

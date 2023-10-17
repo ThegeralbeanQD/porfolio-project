@@ -1,0 +1,134 @@
+@use '../base/breakpoints' as b;
+
+.fan {
+  &-card-wrapper {
+    position: relative;
+    width: 180px;
+    aspect-ratio: 5/7;
+    scale: 0.55;
+    transform: translateY(30%);
+
+    @include b.xs {
+      scale: 0.8;
+    }
+
+    @include b.sm {
+      scale: 0.9;
+    }
+
+    @include b.md {
+      scale: 1;
+    }
+
+  }
+
+  &-card {
+    aspect-ratio: 5/7;
+    position: absolute;
+    border-radius: 8px;
+    transition: all 500ms cubic-bezier(.1, .67, .3, .86);
+
+    &__title {
+      position: absolute;
+      width: max-content;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: -250px;
+    }
+
+    &--big {
+      width: 180px;
+
+      &:nth-child(3) {
+        transform: translateX(-10%) rotate(-1deg);
+        z-index: 1;
+        background-color: rgb(255, 255, 255);
+
+        &.active {
+          transform: translate(-60%, 3%) rotate(-8deg);
+
+        }
+      }
+
+      &:nth-child(4) {
+        z-index: 2;
+        transform: rotate(2deg);
+        background-color: rgb(201, 201, 201);
+
+        &.active {}
+      }
+
+      &:nth-child(5) {
+        z-index: 3;
+        transform: translateX(9%) rotate(4deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        object-fit: contain;
+        background-color: rgb(231, 231, 231);
+
+
+        &.active {
+          transform: translate(60%, 6%) rotate(14deg);
+
+        }
+      }
+    }
+
+    &--small {
+      width: 70px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0 0.4rem;
+
+      &.active:nth-child(1) {
+        top: -130px;
+        left: -50px;
+        transform: translate(-50%, -50%) rotate(-15deg);
+        background-color: rgb(74, 74, 74);
+      }
+
+      &.active:nth-child(2) {
+        top: -90px;
+        left: 230px;
+        transform: translate(-50%, -50%) rotate(28deg);
+        background-color: rgb(74, 74, 74);
+      }
+    }
+
+    &__arrow {
+      position: absolute;
+      width: 100px;
+
+      &.left {
+        transform: translate(-20px, -50px) rotate(90deg) rotateX(180deg);
+      }
+
+      &.right {
+        transform: translate(-30px, -60px) rotate(90deg);
+      }
+
+    }
+
+    &__image {
+      height: 100px;
+      transform: translate(45%, 60%);
+      cursor: pointer;
+
+      &-portfolio-pic {
+        width: 100%;
+        position: relative;
+        transform: translateY(-5px);
+        border-radius: 10px;
+      }
+
+      &-small {
+        width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}

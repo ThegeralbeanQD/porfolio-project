@@ -382,7 +382,39 @@
       max-width: 30px;
     }
   }
+}
 
+.links{
+  margin-block: v.$lg-margin;
+  margin-bottom: 4rem;
+  padding: v.$lg-padding;
+  background-color: v.$secondary-clr;
+  height: 400px;
+
+  &__title{
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+  }
+
+  &> .container{
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
+
+
+  @include b.xs {
+    height: 500px;
+  }
+
+  @include b.sm {
+   height: 550px;
+  }
+
+  @include b.md {
+    height: 600px;
+  }
 }
 
 
