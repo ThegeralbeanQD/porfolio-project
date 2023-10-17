@@ -1,4 +1,5 @@
 @use '../base/breakpoints' as b;
+@use '../abstracts/variables' as v;
 
 .fan {
   &-card-wrapper {
@@ -27,6 +28,7 @@
     position: absolute;
     border-radius: 8px;
     transition: all 700ms cubic-bezier(.1, .67, .3, .86);
+    border: 1px v.$background-clr solid;
 
     &__title {
       position: absolute;
@@ -54,8 +56,6 @@
         z-index: 2;
         transform: rotate(2deg);
         background-color: rgb(201, 201, 201);
-
-        &.active {}
       }
 
       &:nth-child(5) {

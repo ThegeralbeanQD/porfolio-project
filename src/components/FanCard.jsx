@@ -11,7 +11,7 @@ const FanCard = () => {
           if (entry.isIntersecting) {
             setTimeout(() => {
               setCardWrapperInView(true);
-            }, 500)
+            }, 800)
           } else {
             setCardWrapperInView(false);
           }
