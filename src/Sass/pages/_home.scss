@@ -192,9 +192,13 @@
   }
 
   &__title{
-    text-align: center;
+    text-align: left;
     @include b.font-contain{
       font-size: 3.5rem;
+    }
+
+    @include b.lg{
+      text-align: center;
     }
   }
 
