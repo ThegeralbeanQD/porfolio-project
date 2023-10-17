@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import techList from '../helpers/techList.json';
 
-const ProjectDisplay = ({ title, role, tech, children, github }) => {
+const ProjectDisplay = ({ title, role, tech, children, github, imgPreview }) => {
   const [isContentVisible, setContentVisible] = useState(false);
   const [showImage, setShowImage] = useState(false);
 
@@ -35,7 +35,7 @@ const ProjectDisplay = ({ title, role, tech, children, github }) => {
               </button>
             )}
           </p>
-          <img src="/web-previews/ichai-preview.jpg" alt="" className={ showImage ? 'project__content-image animate' :  'project__content-image' } />
+          <img src={imgPreview} alt="" className={ showImage ? 'project__content-image animate' :  'project__content-image' } />
         </div>
         <div className={showImage || isContentVisible ? 'project__action-wrapper animate' : 'project__action-wrapper'}>
           <button className='project__btn view'>VIEW HERE</button>
