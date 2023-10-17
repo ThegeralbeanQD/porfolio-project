@@ -1,7 +1,31 @@
+import { useState, useRef, useEffect } from "react";
 import * as c from "../components"
 
 const HomePage = () => {
   const click = () => alert('clicked')
+  const [linkTitleInView, setlinkTitleInView] = useState(false);
+  const linkeTitleRef = useRef(null)
+
+  useEffect(() => {
+    const linkTitleObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              setlinkTitleInView(true);
+            }, 200)
+          } else {
+            setlinkTitleInView(false);
+          }
+        });
+      },
+      { threshold: 1 }
+    );
+
+    if (linkeTitleRef.current) {
+      linkTitleObserver.observe(linkeTitleRef.current);
+    }
+  }, [])
   return (
     <>
       <header className="header">
@@ -85,7 +109,7 @@ const HomePage = () => {
       </section>
 
       <section className="links">
-        <h4 className="links__title">THIS SITE WAS MADE WITH</h4>
+        <h4 className={linkTitleInView ? "links__title active" : "links__title"} ref={linkeTitleRef}>THIS SITE WAS MADE WITH</h4>
         <div className="container">
           <c.FanCard />
         </div>

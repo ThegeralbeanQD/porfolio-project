@@ -395,6 +395,15 @@
     margin: 0 auto;
     display: block;
     width: fit-content;
+    position: relative;
+    top: 70px;
+    opacity: 0;
+    transition: all 500ms ease-in;
+
+    &.active{
+      opacity: 1;
+      top: 0;
+    }
   }
 
   &> .container{

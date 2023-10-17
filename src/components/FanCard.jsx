@@ -42,7 +42,7 @@ const FanCard = () => {
         <a><img className='fan-card__image' src="/tech-images/github.png" alt="github logo link" /></a>
       </div>
       <div className={cardWrapperInView ? "fan-card fan-card--big active" : 'fan-card fan-card--big'}>
-        <img className='fan-card__image-portfolio-pic' src="/images/portfolioPic.png" alt="headshot" />
+        <img className='fan-card__image-portfolio-pic' src="/images/portfolioPic-clr.png" alt="headshot" />
       </div>
     </div>
   )
