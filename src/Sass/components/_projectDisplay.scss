@@ -17,7 +17,7 @@
     background-color: v.$secondary-clr;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 40px);
   }
 
   &__title {
@@ -116,7 +116,7 @@
       height: 115px;
 
       &.animate {
-        height: 150px;
+        height: 165px;
         overflow-y: scroll;
         -webkit-mask: linear-gradient(transparent,
             v.$background-clr 0%,
@@ -170,6 +170,8 @@
     transition: all 400ms;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
+
+
     @include b.md {
       height: 100%;
       max-height: 200px;
@@ -204,7 +206,7 @@
   width: 100%;
   position: absolute;
 
-  bottom: 20px;
+  bottom: 0;
 }
 
 &__btn {
