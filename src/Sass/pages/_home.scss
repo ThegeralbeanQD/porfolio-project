@@ -209,12 +209,34 @@
     color: v.$white-clr;
     text-transform: uppercase;
     transition: all 200ms;
+    position: relative;
+    cursor: pointer;
+    margin-top: 2rem;
 
-    @include b.lg{
+    &::before {
+      content: 'All projects showcase is currently in development, connect with me to stay up to date.';
+      text-transform: none;
+      position: absolute;
+      width: max-content;
+      top: -55px;
+      left: 50%;
+      background-color: rgb(v.$secondary-clr, 0.7);
+      padding: v.$padding;
+      border-radius: 10px;
+      transform: translate(-50%, 0) scale(0);
+      transition: all 200ms;
+    }
+
+    &:hover::before {
+      transform: translate(-50%, 0) scale(1);
+      color: v.$white-clr;
+    }
+    
+    // @include b.lg{
       &:hover{
         color: rgba(v.$white-clr, 0.5);
       }
-    }
+    // }
   }
 }
 

@@ -36,10 +36,10 @@ const FanCard = () => {
         <img className='fan-card__image-small' src="/tech-images/react.png" alt="react logo" />
       </div>
       <div className={cardWrapperInView ? "fan-card fan-card--big active" : 'fan-card fan-card--big'}>
-        <a><img className='fan-card__image' src="/tech-images/linkedin.png" alt="linkedin logo link" /></a>
+      <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/geraldine-ho-2617111a9/'><img className='fan-card__image' src="/tech-images/linkedin.png" alt="linkedin logo link" /></a>
       </div>
       <div className={cardWrapperInView ? "fan-card fan-card--big active" : 'fan-card fan-card--big'}>
-        <a><img className='fan-card__image' src="/tech-images/github.png" alt="github logo link" /></a>
+        <a target="_blank" rel='noreferrer' href='https://github.com/ThegeralbeanQD/porfolio-project'><img className='fan-card__image' src="/tech-images/github.png" alt="github logo link" /></a>
       </div>
       <div className={cardWrapperInView ? "fan-card fan-card--big active" : 'fan-card fan-card--big'}>
         <img className='fan-card__image-portfolio-pic' src="/images/portfolioPic-clr.png" alt="headshot" />

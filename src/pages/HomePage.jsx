@@ -60,18 +60,95 @@ const HomePage = () => {
             role='Frontend Developer'
             tech={['react', 'hostinger', 'figma']}
             imgPreview="/web-previews/ichai-preview.jpg"
-            content= {`Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas nesciunt consequatur praesentium eveniet beatae mollitia minus aliquid rem eius numquam veritatis odio adipisci explicabo porro, natus obcaecati doloremque ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam natus inventore ex provident reprehenderit ipsam expedita accusamus adipisci. Quos autem deleniti, dolor officiis doloremque facilis laudantium porro voluptatum quo <b> consequatur </b> debitis, iusto, <em> ducimus </em> voluptas error minus molestias quaerat molestiae eligendi repudiandae voluptatem incidunt eaque eius magnam? Dolorem facere laudantium similique. Praesentium laudantium corrupti
-            fugit dolorum vitae perferendis necessitatibus, reprehenderit hic! Consectetur maxime voluptatibus ab labore laudantium, ut culpa doloremque repellendus molestiae magnam dolorum nam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas nesciunt consequatur praesentium eveniet beatae mollitia minus aliquid rem eius numquam veritatis odio adipisci explicabo porro, natus obcaecati doloremque ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam natus inventore ex provident reprehenderit ipsam expedita accusamus adipisci. Quos autem deleniti, dolor officiis doloremque facilis laudantium porro voluptatum quo consequatur debitis, iusto, ducimus voluptas error minus molestias quaerat molestiae eligendi repudiandae voluptatem incidunt eaque eius magnam? Dolorem facere laudantium similique. Praesentium laudantium corrupti fugit dolorum vitae perferendis necessitatibus, reprehenderit hic! Consectetur maxime voluptatibus ab labore laudantium, ut culpa doloremque repellendus molestiae magnam dolorum nam.`}
+            content={`<p>Resigning a website for a local restaurant based in Glasgow. I-Chai serves delicious Chinese cuisine and wanted a website that matched it. The website is design by me with input from the owners. The site previously had issues with responsiveness and was the main reason it needed to be changed and now is fully responsive on computer, tablets, and mobile phones.</p>
+            <br/>
+            <h5>Design</h5>
+            <br/>
+            <p>I-Chai wanted their website to feel more modern and more minimal compared to their old website. I helped them design their website so that the most important links and information are clearly shown upon entering the website or can be found intuitively by scrolling down the main page.</p>
+            <br/>
+            <h5>What I learned</h5>
+            <br/>
+            <ul>
+            <li>
+            Integrating ResDiary (reservation booking)
+            </li>
+            <li>
+            Usage of the ResDiary widget configurator to match the theme of the website
+            </li>
+            <li>
+            Domain transfer
+            </li>
+            <li>
+            Domain email setup
+            </li>
+            <li>
+            Hosting on hostinger
+            </li>
+            <li>
+            Usage of the ResDiary widget configurator to match the theme of the website
+            </li>
+            </ul>
+            <br/>
+            <h5>Future Work</h5>
+            <br/>
+            <p>I-Chai is looking to add a new letter signup to their website and a way for customers to purchase gift vouchers, virtual and physical</p>
+            <br/>
+            <ul>
+            <li>
+            Implementing MailChimp services 
+            </li>
+            <li>
+            Implementing stripe payment processing platform
+            </li>
+            </ul>
+
+            `}
           />
-           
+
           <c.ProjectDisplay
             title='Bump'
             role='Fullstack developer'
             tech={['react', 'mongodb', 'node', 'jest', 'vite', 'figma']}
             imgPreview="/web-previews/bump-preview.jpg"
-            content={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptas nesciunt consequatur praesentium eveniet beatae mollitia minus aliquid rem eius numquam veritatis odio adipisci explicabo porro, natus obcaecati doloremque ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam natus inventore ex provident reprehenderit ipsam expedita accusamus adipisci. Quos autem deleniti, dolor officiis doloremque facilis laudantium porro voluptatum quo consequatur debitis, iusto, ducimus voluptas error minus molestias quaerat molestiae eligendi repudiandae voluptatem incidunt eaque eius magnam? Dolorem facere laudantium similique. Praesentium laudantium corrupti fugit dolorum vitae perferendis necessitatibus, reprehenderit hic! Consectetur maxime voluptatibus ab labore laudantium, ut culpa doloremque repellendus molestiae magnam dolorum nam.`}
+            freeDeploy={true}
+            content={`<p>Bump was an original idea designed by me and my team during La Fosse Academy. The website’s goal is to provide support for pregnant women during their 9 months. The idea is to create a space for women to further understand their pregnancy, track their pregnancy related events and be able to communicate with other pregnant women for support. </p>
+            <br/>
+            <h5>Design</h5>
+            <br/>
+            <p>The design was to feel soft and round to represent pregnancy, we wanted baby/light colours and a clean look and feel to the website. We also wanted to have friendly imagery within the website to allude to children.</p>
+            <br/>
+            <h5>What I learned</h5>
+            <br/>
+            <ul>
+              <li>
+                Importance of team communication as every person has their own ideas
+              </li>
+              <li>
+                Mastered the use of useEfect within React for communication with our API and database.
+              </li>
+              <li>
+                Understanding the differences in MongoDB and Mongoose
+              </li>
+            </ul>
+            <br/>
+            <h5>Future Work</h5>
+            <br/>
+            <p>The project is finish but there as some quality of life changes to be implemented</p>
+            <br/>
+            <ul>
+              <li>
+                Consistent design thoughout
+              </li>
+              <li>
+                Reduction in load time
+              </li>
+              <li>
+                More features for women after their pregnancy period
+              </li>
+            </ul>
+            `}
           />
-          <a href="" className="featured__project-link"> view more</a>
+          <p href="" className="featured__project-link"> view more</p>
         </div>
       </section>
 

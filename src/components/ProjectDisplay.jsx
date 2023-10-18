@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import techList from '../helpers/techList.json';
 
-const ProjectDisplay = ({ title, role, tech, content, github, imgPreview }) => {
+const ProjectDisplay = ({ title, role, tech, content, github, imgPreview, freeDeploy }) => {
   const [isContentVisible, setContentVisible] = useState(false);
   const [showImage, setShowImage] = useState(false);
+  const [showSiteWarning, setShowSiteWarning] = useState(false);
+
+  useEffect(() => {
+    if (freeDeploy == true) {
+      setShowSiteWarning(true)
+    }
+
+  }, [])
+
 
   const techToRender = Array.isArray(tech)
     ? tech.map((techName, index) => techList[techName] && (
@@ -25,16 +34,22 @@ const ProjectDisplay = ({ title, role, tech, content, github, imgPreview }) => {
       <div className="project__tech-stack">
         {techToRender}
       </div>
+      {showSiteWarning ? (
+        <div className='project__site-warning-wrapper'>
+          <i className='fa fa-close project__site-warning-wrapper close' onClick={() => setShowSiteWarning(false)}></i>
+          <p className='project__site-warning'>This site was uploaded to a free hosting service, some aspects may take longer to load. Thank you!</p>
+        </div>
+      ) : null}
       <div className={isContentVisible || showImage ? 'project__body animate' : 'project__body'}>
         <div className='project__content'>
-          <p className={isContentVisible ? 'project__content-paragraph animate' : 'project__content-paragraph'}>
-            <span dangerouslySetInnerHTML={{ __html: isContentVisible ? content : `${content.slice(0, 180)}...` }} />
+          <div className={isContentVisible ? 'project__content-paragraph animate' : 'project__content-paragraph'}>
+            <div dangerouslySetInnerHTML={{ __html: isContentVisible ? content : `${content.slice(0, 180)}...` }} />
             {content.length > 180 && (
               <button onClick={toggleContentVisibility} className='project__content-btn'>
                 {isContentVisible ? 'Show Less' : 'Show More'}
               </button>
             )}
-          </p>
+          </div>
           <img src={imgPreview} alt="" className={showImage ? 'project__content-image animate' : 'project__content-image'} />
         </div>
         <div className={showImage || isContentVisible ? 'project__action-wrapper animate' : 'project__action-wrapper'}>

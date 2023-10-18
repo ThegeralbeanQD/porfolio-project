@@ -65,6 +65,21 @@
     }
   }
 
+  &__site-warning-wrapper{
+    position: relative;
+
+    &.close{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  &__site-warning{
+    background-color: rgb(182, 145, 137);
+    padding: 1rem 2rem;
+  }
+
   &__body {
     position: relative;
     height: 100%;
@@ -127,9 +142,7 @@
             v.$background-clr 85%,
             transparent);
         padding-right: v.$padding;
-        padding-block: v.$lg-padding (
-          + 4rem
-        );
+        padding-block: v.$lg-padding (+ 2rem);
 
       @include b.xs {
         height: 180px;
@@ -140,11 +153,21 @@
       }
 
       @include b.md {
-        height: 300px;
+        height: 345px;
       }
 
       @include b.lg {
         height: 400px;
+      }
+
+      & li{
+        list-style:circle;
+        margin-left: 50px;
+        margin-block: 1rem;
+      }
+
+      & h5{
+        text-transform: uppercase;
       }
     }
 
