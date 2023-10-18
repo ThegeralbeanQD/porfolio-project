@@ -60,7 +60,10 @@ const HomePage = () => {
             role='Frontend Developer'
             tech={['react', 'hostinger', 'figma']}
             imgPreview="/web-previews/ichai-preview.jpg"
-            content={`<p>Resigning a website for a local restaurant based in Glasgow. I-Chai serves delicious Chinese cuisine and wanted a website that matched it. The website is design by me with input from the owners. The site previously had issues with responsiveness and was the main reason it needed to be changed and now is fully responsive on computer, tablets, and mobile phones.</p>
+            websiteShow={true}
+            websiteLink='https://www.ichaiglasgow.com/'
+            content={
+              `<p>Redesigning a website for a local restaurant based in Glasgow. I-Chai serves delicious Chinese cuisine and wanted a website that      matched it. The website is design by me with input from the owners. The site previously had issues with responsiveness and was the main reason it needed to be changed and now is fully responsive on computer, tablets, and mobile phones.</p>
             <br/>
             <h5>Design</h5>
             <br/>
@@ -102,7 +105,7 @@ const HomePage = () => {
             </li>
             </ul>
 
-            `}
+          `}
           />
 
           <c.ProjectDisplay
@@ -111,7 +114,12 @@ const HomePage = () => {
             tech={['react', 'mongodb', 'node', 'jest', 'vite', 'figma']}
             imgPreview="/web-previews/bump-preview.jpg"
             freeDeploy={true}
-            content={`<p>Bump was an original idea designed by me and my team during La Fosse Academy. The website’s goal is to provide support for pregnant women during their 9 months. The idea is to create a space for women to further understand their pregnancy, track their pregnancy related events and be able to communicate with other pregnant women for support. </p>
+            gitShow={true}
+            websiteShow={true}
+            gitLink='https://github.com/Chey-DB/bump-backend'
+            websiteLink='https://bump-kwkn.onrender.com/'
+            content={
+              `<p>Bump was an original idea designed by me and my team during La Fosse Academy. The website’s goal is to provide support for pregnant women during their 9 months. The idea is to create a space for women to further understand their pregnancy, track their pregnancy related events and be able to communicate with other pregnant women for support. </p>
             <br/>
             <h5>Design</h5>
             <br/>
@@ -191,6 +199,17 @@ const HomePage = () => {
         <h4 className={linkTitleInView ? "links__title active" : "links__title"} ref={linkeTitleRef}>THIS SITE WAS MADE WITH</h4>
         <div className="container">
           <c.FanCard />
+        </div>
+      </section>
+
+      <section className="contact">
+        <div className="container">
+          <h2 className="contact__title">WANT TO <span>WORK WITH ME?</span></h2>
+          <div className="contact__availablity">
+            <div className="contact__availablity-light"></div>
+            <p className="contact__availablity-text">Available for Work</p>
+          </div>
+          <c.ContactForm/>
         </div>
       </section>
     </>

@@ -34,7 +34,7 @@
   }
 
   &__tech-stack {
-    margin-block: v.$lg-margin + (1.5rem);
+    margin-block: v.$lg-margin + (1rem);
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -65,19 +65,24 @@
     }
   }
 
-  &__site-warning-wrapper{
+  &__site-warning-wrapper {
     position: relative;
+    margin-bottom: v.$lg-margin + (1rem);
 
-    &.close{
+    &-close {
       position: absolute;
-      right: 10px;
-      top: 10px;
+      right: 0;
+      top: 0;
+      height: 30px;
+      width: 30px;
+      line-height: 28px;
+      text-align: center;
     }
   }
 
-  &__site-warning{
-    background-color: rgb(182, 145, 137);
-    padding: 1rem 2rem;
+  &__site-warning {
+    background-color: rgb(234, 87, 54);
+    padding: 1.5rem 2rem;
   }
 
   &__body {
@@ -89,16 +94,19 @@
     &.animate {
       height: 250px;
 
-      @include b.xs{
+      @include b.xs {
         height: 275px;
       }
-      @include b.sm{
+
+      @include b.sm {
         height: 300px;
       }
-      @include b.md{
+
+      @include b.md {
         height: 425px;
       }
-      @include b.lg{
+
+      @include b.lg {
         height: 500px;
       }
     }
@@ -142,7 +150,9 @@
             v.$background-clr 85%,
             transparent);
         padding-right: v.$padding;
-        padding-block: v.$lg-padding (+ 2rem);
+        padding-block: v.$lg-padding (
+          + 2rem
+        );
 
       @include b.xs {
         height: 180px;
@@ -160,13 +170,13 @@
         height: 400px;
       }
 
-      & li{
-        list-style:circle;
+      & li {
+        list-style: circle;
         margin-left: 50px;
         margin-block: 1rem;
       }
 
-      & h5{
+      & h5 {
         text-transform: uppercase;
       }
     }
@@ -233,7 +243,10 @@
 }
 
 &__btn {
-
+  text-align: center;
+  text-decoration: none;
+  color: v.$white-clr;
+  
   &.view {
     background-color: v.$primary-clr;
     padding: v.$lg-padding;

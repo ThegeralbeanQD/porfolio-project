@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import techList from '../helpers/techList.json';
 
-const ProjectDisplay = ({ title, role, tech, content, github, imgPreview, freeDeploy }) => {
+const ProjectDisplay = ({ title, role, tech, content, gitLink, imgPreview, freeDeploy, websiteLink, gitShow, websiteShow }) => {
   const [isContentVisible, setContentVisible] = useState(false);
   const [showImage, setShowImage] = useState(false);
   const [showSiteWarning, setShowSiteWarning] = useState(false);
@@ -36,8 +36,8 @@ const ProjectDisplay = ({ title, role, tech, content, github, imgPreview, freeDe
       </div>
       {showSiteWarning ? (
         <div className='project__site-warning-wrapper'>
-          <i className='fa fa-close project__site-warning-wrapper close' onClick={() => setShowSiteWarning(false)}></i>
-          <p className='project__site-warning'>This site was uploaded to a free hosting service, some aspects may take longer to load. Thank you!</p>
+          <i className='fa fa-close project__site-warning-wrapper-close' onClick={() => setShowSiteWarning(false)}></i>
+          <p className='project__site-warning'>Hosted on free service, some aspects may take longer to load. Thank you!</p>
         </div>
       ) : null}
       <div className={isContentVisible || showImage ? 'project__body animate' : 'project__body'}>
@@ -53,10 +53,13 @@ const ProjectDisplay = ({ title, role, tech, content, github, imgPreview, freeDe
           <img src={imgPreview} alt="" className={showImage ? 'project__content-image animate' : 'project__content-image'} />
         </div>
         <div className={showImage || isContentVisible ? 'project__action-wrapper animate' : 'project__action-wrapper'}>
-          <button className='project__btn view'>VIEW HERE</button>
-          <a href={github} className='project__btn git'>
-            <img className='project__btn-image' src="/tech-images/git.png" alt="git image" />
-          </a>
+          {websiteShow ? (<a target="_blank" rel='noreferrer' href={websiteLink} className='project__btn view'>VIEW HERE</a>) : null}
+          {gitShow ?
+            (<a target="_blank" rel='noreferrer' href={gitLink} className='project__btn git'>
+              <img className='project__btn-image' src="/tech-images/git.png" alt="git image" />
+            </a>)
+            : null
+          }
           <i onClick={imageReveal} className='project__btn-image fa-regular fa-images'>
           </i>
         </div>

@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as v;
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  &__textarea{
+    &-wraper{
+      position: relative;
+      & label{
+        position: absolute;
+        color: rgba(v.$background-clr, 0.6);
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    &:valid + label{
+      display: none;
+    }
+
+    padding: v.$padding;
+    resize: none;
+    width: 100%;
+  }
+
+  &__email{
+    width: 100%;
+
+    &:focus + label{
+      display: none;
+    }
+
+    &-wraper{
+      position: relative;
+      & label{
+        position: absolute;
+        color: rgba(v.$background-clr, 0.6);
+        top: 10px;
+        left: 10px;
+      }
+    }
+    padding: v.$padding;
+  }
+}
