@@ -25,7 +25,7 @@ const ProjectDisplay = ({ title, role, tech, children, github, imgPreview }) => 
       <div className="project__tech-stack">
         {techToRender}
       </div>
-      <div className='project__body'>
+      <div className={isContentVisible || showImage ? 'project__body animate' : 'project__body'}>
         <div className='project__content'>
           <p className={ isContentVisible ? 'project__content-paragraph animate' :  'project__content-paragraph' }>
             {isContentVisible ? children : `${children.slice(0, 180)}...`}

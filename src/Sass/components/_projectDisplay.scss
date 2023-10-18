@@ -39,14 +39,14 @@
     flex-wrap: wrap;
     gap: 2rem;
 
-    &-img-wrapper{
+    &-img-wrapper {
       position: relative;
 
-      &:hover::before{
+      &:hover::before {
         transform: translate(-50%, 0) scale(1);
       }
 
-      &::before{
+      &::before {
         content: attr(data-tech-name);
         text-transform: uppercase;
         position: absolute;
@@ -67,12 +67,30 @@
 
   &__body {
     position: relative;
+    height: 100%;
+    height: 205px;
+    transition: all 300ms;
+
+    &.animate {
+      height: 250px;
+
+      @include b.xs{
+        height: 275px;
+      }
+      @include b.sm{
+        height: 300px;
+      }
+      @include b.md{
+        height: 425px;
+      }
+      @include b.lg{
+        height: 500px;
+      }
+    }
   }
 
   &__content {
     margin-block: v.$margin;
-    position: relative;
-    // min-height: 200px;
 
     &-btn {
       display: inline;
@@ -94,9 +112,11 @@
       position: absolute;
       z-index: 1;
       opacity: 1;
+      transition: all 300ms;
+      height: 115px;
 
       &.animate {
-        max-height: 165px;
+        height: 150px;
         overflow-y: scroll;
         -webkit-mask: linear-gradient(transparent,
             v.$background-clr 0%,
@@ -107,104 +127,97 @@
             v.$background-clr 85%,
             transparent);
         padding-right: v.$padding;
-        padding-block: v.$lg-padding (+ 1rem);
+        padding-block: v.$lg-padding (
+          + 1rem
+        );
 
-        @include b.xs {
-          max-height: 185px;
-        }
-
-        @include b.sm {
-          max-height: 220px;
-        }
-
-        @include b.md {
-          max-height: 200px;
-        }
+      @include b.xs {
+        height: 180px;
       }
 
-      &::-webkit-scrollbar {
-        width: 8px;
+      @include b.sm {
+        height: 200px;
       }
 
-      &::-webkit-scrollbar-track {
-        background: v.$primary-clr;
-        border-radius: 10px;
+      @include b.md {
+        height: 300px;
       }
 
-      &::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 20px;
+      @include b.lg {
+        height: 400px;
       }
     }
 
-    &-image {
-      width: 100%;
-      position: relative;
-      z-index: 2;
-      transition: all 400ms;
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
 
-      @include b.md {
-        height: 100%;
-        max-height: 200px;
-      }
+    &::-webkit-scrollbar-track {
+      background: v.$primary-clr;
+      border-radius: 10px;
+    }
 
-      &:hover {
-        @include b.lg {
-          scale: 1.35;
-        }
-
-        @include b.lg {
-          scale: 1.4;
-        }
-      }
-
-      &.animate {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        max-height: 600px;
-
-
-        &~.project__content-paragraph {
-          opacity: 0;
-        }
-      }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
     }
   }
 
-  &__action-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
+  &-image {
+    width: 100%;
     position: relative;
-
-    bottom: 40px;
-    transition: all 200ms;
-    margin-block: v.$lg-margin;
-
-    @include b.xs {
-      bottom: 70px;
-    }
+    z-index: 2;
+    transition: all 400ms;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
     @include b.md {
-      bottom: 50px;
+      height: 100%;
+      max-height: 200px;
+    }
+
+    &:hover {
+      @include b.lg {
+        scale: 1.35;
+      }
+
+      @include b.lg {
+        scale: 1.4;
+      }
     }
 
     &.animate {
-      bottom: 0;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      max-height: 600px;
+
+
+      &~.project__content-paragraph {
+        opacity: 0;
+      }
     }
   }
+}
 
-  &__btn {
+&__action-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  width: 100%;
+  position: absolute;
 
-    &.view {
-      background-color: v.$primary-clr;
-      padding: v.$lg-padding;
-      width: clamp(150px, 40%, 200px);
-    }
+  bottom: 20px;
+}
 
-    &-image {
-      max-height: 40px;
-      font-size: 35px;
-    }
+&__btn {
+
+  &.view {
+    background-color: v.$primary-clr;
+    padding: v.$lg-padding;
+    width: clamp(150px, 40%, 200px);
   }
+
+  &-image {
+    max-height: 40px;
+    font-size: 35px;
+  }
+}
 }
