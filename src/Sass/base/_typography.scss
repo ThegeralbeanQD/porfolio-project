@@ -52,7 +52,8 @@ p{
 h1,
 h2,
 h3,
-h4{
+h4,
+h5{
   font-family: v.$oswald-font;
   line-height: 1.35;
 }
@@ -106,6 +107,19 @@ h4{
   }
   @include b.xl{
     font-size: 3.554rem;
+  }
+}
+
+h5{
+  font-size: 1.866rem;
+  @include b.md{
+    font-size: 2.133rem;
+  }
+  @include b.lg{
+    font-size: 2.399rem;
+  }
+  @include b.xl{
+    font-size: 2.666rem;
   }
 }
 
