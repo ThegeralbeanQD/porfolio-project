@@ -3,21 +3,26 @@
 .contact-form{
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
 
   &__textarea{
+    border: none;
+    background-color: rgba(v.$white-clr, 0.3);
+    border-radius: 3px;
+    color: v.$white-clr;
+    height: 250px;
+
     &-wraper{
       position: relative;
       & label{
         position: absolute;
-        color: rgba(v.$background-clr, 0.6);
-        top: 10px;
-        left: 10px;
+        color: rgba(v.$white-clr, 0.6);
+        top: 15px;
+        left: 15px;
       }
-    }
-
-    &:valid + label{
-      display: none;
     }
 
     padding: v.$padding;
@@ -26,21 +31,30 @@
   }
 
   &__email{
+    border-radius: 3px;
     width: 100%;
-
-    &:focus + label{
-      display: none;
-    }
+    background-color: rgba(v.$white-clr, 0.3);
+    border: none;
+    padding: 1.8rem 1rem;
+    color: v.$white-clr;
 
     &-wraper{
       position: relative;
       & label{
         position: absolute;
-        color: rgba(v.$background-clr, 0.6);
-        top: 10px;
-        left: 10px;
+        color: rgba(v.$white-clr, 0.6);
+        transform: translateY(-50%);
+        top: 50%;
+        left: 15px;
       }
     }
-    padding: v.$padding;
+  }
+
+  &__submit{
+    border-radius: 3px;
+    background-color: v.$primary-clr;
+    color: v.$background-clr;
+    padding: 1.8rem 1rem;
+    margin-top: 0.5rem;
   }
 }

@@ -465,9 +465,22 @@
   margin-block: v.$lg-margin;
   margin-bottom: 10rem;
 
+  & .container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include b.md{
+      align-items: center;
+    }
+  }
+
   &__title {
     & span {
       display: block;
+      @include b.md{
+        display: inline;
+      }
     }
 
     @include b.font-contain {
