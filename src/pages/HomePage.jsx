@@ -202,6 +202,8 @@ const HomePage = () => {
         </div>
       </section>
 
+      
+
       <section className="contact">
         <div className="container">
           <h2 className="contact__title">WANT TO <span>WORK WITH ME?</span></h2>
@@ -209,8 +211,8 @@ const HomePage = () => {
             <div className="contact__availablity-light"></div>
             <p className="contact__availablity-text">Available for Work</p>
           </div>
-          <c.ContactForm/>
         </div>
+          <c.ContactForm />
       </section>
     </>
   )

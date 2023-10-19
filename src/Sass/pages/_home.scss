@@ -491,6 +491,7 @@
   &__availablity {
     display: flex;
     margin-block: v.$lg-margin;
+    align-items: center;
 
     &-light {
       width: 20px;

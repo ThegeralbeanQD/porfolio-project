@@ -1,8 +1,37 @@
-import React, {useState} from 'react'
+import React, { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser';
+
+import Popup from './Popup';
 
 const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [show, setShow] = useState(true);
+  const [popupMessasge, setPopupMessage] = useState('')
+  const [barColor, setBarColor] = useState('')
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Promise.reject('reject')
+    emailjs.sendForm('service_cyqold1', 'template_zdudn46', form.current, '5TS5ZsTJyHSI7Cynf')
+      .then((result) => {
+        setPopupMessage('Thank you for your email!')
+        setBarColor('rgb(0, 255, 0)')
+        setShow(true)
+        setTimeout(() => {
+          setShow(false);
+        }, 5000);
+      }, (error) => {
+        setPopupMessage('Oh no! Something went wrong :(')
+        setBarColor('rgb(255, 0, 0)')
+        setShow(true)
+        setTimeout(() => {
+          setShow(false);
+        }, 5000);
+      });
+  };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -12,25 +41,28 @@ const ContactForm = () => {
     setMessage(e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Email:', email);
-    console.log('Message:', message);
-  };
-
-
   return (
-    <form className='contact-form' action="mailto:test@outlook.com">
-      <div className='contact-form__textarea-wraper'>
-        <textarea required name="contact-text" id="contact-text" cols="30" rows="10" className='contact-form__textarea' onChange={handleMessageChange} value={message}></textarea>
-        {message.length == 0 ? (<label htmlFor="contact-text">Drop me a small message :)</label>) : null}
+    <>
+      {show ? (<Popup
+        message='{popupMessasge}'
+        barColor={barColor}
+        show={show}
+        setShow={setShow}
+      />) : null}
+      <div className='container'>
+        <form className='contact-form' onSubmit={sendEmail} ref={form}>
+          <div className='contact-form__textarea-wraper'>
+            <textarea required name="message" id="contact-text" cols="30" rows="10" className='contact-form__textarea' onChange={handleMessageChange} value={message}></textarea>
+            {message.length == 0 ? (<label htmlFor="contact-text">Drop me a message :)</label>) : null}
+          </div>
+          <div className='contact-form__email-wraper'>
+            <input required className='contact-form__email' id='contact-email' type="email" name='user_email' onChange={handleEmailChange} value={email} />
+            {email.length == 0 ? (<label htmlFor="contact-email" >Your email</label>) : null}
+          </div>
+          <button className='contact-form__submit' type='sumbit'>SUBMIT</button>
+        </form>
       </div>
-      <div className='contact-form__email-wraper'>
-        <input  required className='contact-form__email' id='contact-email' type="email" onChange={handleEmailChange} value={email}/>
-        {email.length == 0 ? (<label htmlFor="contact-email" >Your email</label>) : null}
-      </div>
-      <button className='contact-form__submit' type='sumbit'>SUBMIT</button>
-    </form>
+    </>
   )
 }
 
