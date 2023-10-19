@@ -102,6 +102,9 @@
       font-size: 20px;
       font-family: v.$quattro-font;
       text-transform: uppercase;
+      & a{
+        color: white;
+      }
 
       &-deco {
         position: relative;

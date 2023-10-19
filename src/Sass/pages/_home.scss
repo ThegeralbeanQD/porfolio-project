@@ -142,10 +142,10 @@
       margin: v.$margin;
       padding: v.$lg-padding;
       text-transform: uppercase;
+      display: inline-block;
 
       @include b.sm {
         width: calc(100%/2 - 2rem);
-        display: inline;
       }
 
       @include b.md {
@@ -237,14 +237,25 @@
       content: 'All projects showcase is currently in development, connect with me to stay up to date.';
       text-transform: none;
       position: absolute;
-      width: max-content;
-      top: -55px;
+      width: 250px;
+      top: -95px;
       left: 50%;
       background-color: rgb(v.$secondary-clr, 0.7);
       padding: v.$padding;
       border-radius: 10px;
       transform: translate(-50%, 0) scale(0);
       transition: all 200ms;
+
+      @include b.xs{
+        width: 350px;
+      }
+      @include b.md{
+        width: 500px;
+      }
+      @include b.lg{
+        width: max-content;
+        top: -55px;
+      }
     }
 
     &::after {
@@ -365,6 +376,8 @@
       text-decoration: none;
       text-transform: uppercase;
       background-color: v.$primary-clr;
+
+
 
       transition: all 200ms ease-out;
       &:hover {

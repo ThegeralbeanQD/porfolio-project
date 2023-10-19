@@ -47,8 +47,8 @@ const HomePage = () => {
         <div className="header__cta">
           <p className="header__cta-content">psychology graduate turned passionate software developer</p>
           <div className="header__cta-btn-wrapper container">
-            <button className="header__cta-btn header__cta-btn--primary"><Link to='projects'>my work</Link></button>
-            <button onClick={click} className="header__cta-btn header__cta-btn--secondary"><Link to='bio'>Learn more</Link></button>
+            <Link className="header__cta-btn header__cta-btn--primary" Link to='projects'>my work</Link>
+            <Link  className="header__cta-btn header__cta-btn--secondary" to='bio'>Learn more</Link>
           </div>
         </div>
       </header>
