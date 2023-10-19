@@ -361,7 +361,10 @@
       width: 80%;
       padding: v.$lg-padding;
       margin-block: v.$lg-margin;
+      text-align: center;
+      text-decoration: none;
       text-transform: uppercase;
+      background-color: v.$primary-clr;
 
       transition: all 200ms ease-out;
       &:hover {
@@ -418,6 +421,15 @@
       align-items: center;
       gap: 1.5rem;
       margin-block: v.$lg-margin;
+
+      & a{
+        color: v.$primary-clr;
+        margin: 0 10px;
+        transition: all 200ms;
+        &:hover{
+          color: rgba(v.$primary-clr, 0.6);
+        }
+      }
 
       @include b.md {
         margin-block: v.$lg-margin + 1rem;
@@ -502,6 +514,7 @@
 
 .contact {
   position: sticky;
+  z-index: 3;
   background-color: v.$background-clr;
   top: 0;
   height: 100vh;

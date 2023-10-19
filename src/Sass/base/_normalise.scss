@@ -37,6 +37,10 @@ select {
   font: inherit;
 }
 
+a{
+  color: v.$background-clr;
+}
+
 body::-webkit-scrollbar {
   width: 8px;
 }

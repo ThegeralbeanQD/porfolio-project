@@ -35,7 +35,7 @@ const HomePage = () => {
             <div className="header__content-wraper">
               <h1 className="header__primary"><span className="header__primary-start">FULLY STACKED</span> <br /> AND <br /> NOT GOING BACK</h1>
               <h4 className="header__secondary">
-                <span className="header__secondary-main">GI GERALDINE HO</span>
+                <span className="header__secondary-main">(GI) GERALDINE HO</span>
                 <span className="header__secondary-sub"> SOFTWARE DEVELOPER</span>
               </h4>
             </div>
@@ -166,11 +166,16 @@ const HomePage = () => {
           <h2 className="bio__title">WHO IS GERALDINE</h2>
           <div className="bio__body">
             <img src="/images/graduationPhoto.jpg" alt="picture at graduation" className="bio__body-content-image" />
-            <button className="bio__body-content-cta primary-btn">view resume</button>
+            <a
+              href="https://geraldineho.co.uk/Gi_CV_1023.pdf" 
+              className="bio__body-content-cta"
+              target="_blank"
+              rel='noreferrer'
+            >view resume</a>
             <p className="bio__body-content">
-              Born Gi Qui Geraldine Ho, I grew up surrounded by technology and most of my hobbies to this day involve technology in one form or another.
+              Born and based in Scotland, I grew up surrounded by technology and most of my hobbies to this day involve technology in one form or another.
               <span className="bio__body-content-span">
-                I studied psychology and during my final year I was given the opportunity to combine psychology and technology which was a turning point for my career aspirations. Now my goals are to code and I hope to use technology for learning.
+                I pursued a degree in psychology, and it was during my final year that I had a transformative experience. I was given the opportunity to combine psychology and technology which profoundly influenced my career ambitions. Now my professional goals involve learning more about software development and some day use technology for care or to enhance learning experiences.
               </span>
             </p>
           </div>
@@ -181,7 +186,7 @@ const HomePage = () => {
         <div className="container">
           <div className="bio-sub__body">
             <h3 className="bio-sub__title">WHY YOU <span className="bio-sub__title-span">SHOULD WORK WITH ME</span></h3>
-            <p className="bio-sub__content"> Although I am young I have a lot of knowledge I’m excited use and continue to learn. Being fresh out of university, my drive and motivation for contributing to a big project is unparalleled. My strong work ethic and interest in my skills is shown in every aspect of my life (just ask my friends and family... i think they’re getting sick of me) and I want to show YOU.
+            <p className="bio-sub__content"> Dispite age, I bring a wealth of knowledge that I’m excited use and to further learn more. Being fresh out of university, my drive and motivation for contributing to a big project is unparalleled. My strong work ethic and interest in my skills is shown in every aspect of my work — just ask my friends and family (although they might be getting tired of hearing about it). I'm eager to use this enthusiasm and expertise within your team.
               Check out my resume to find out more!</p>
           </div>
           <div className="bio-sub__body">
@@ -190,8 +195,20 @@ const HomePage = () => {
               <img className="bio-sub__misc-image" src="/images/kore.jpg" alt="dog image" />
               <p className="bio-sub__misc-content">In addition to staring at my screen most of the day, i enjoy spending time with my dog. </p>
             </div>
-            <div className="bio-sub__misc-wrapper"> <img className="bio-sub__misc-icon" src="/images/pride.png" alt="" /> <p>A proud member of the LGBTQ+ community. </p></div>
-            <div className="bio-sub__misc-wrapper"> <img className="bio-sub__misc-icon" src="/images/sdg.png" alt="" /> <p>Advocate for Sustainable Development Goals - Click here to view my university project.</p></div>
+            <div className="bio-sub__misc-wrapper">
+              <img className="bio-sub__misc-icon" src="/images/pride.png" alt="" />
+              <p>A proud member of the LGBTQ+ community. </p>
+            </div>
+            <div className="bio-sub__misc-wrapper">
+              <img className="bio-sub__misc-icon" src="/images/sdg.png" alt="" />
+              <p>Advocate for Sustainable Development Goals -
+                <a
+                  target="_blank"
+                  rel='noreferrer'
+                  href="https://simmer.io/@ThgeralbeanQD/sdg-quiz-group-project">Click here</a>
+                to view my university project.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -203,9 +220,9 @@ const HomePage = () => {
             <c.FanCard />
           </div>
         </section>
-  
-        
-  
+
+
+
         <section className="contact" id="contact">
           <div className="container">
             <h2 className="contact__title">WANT TO <span>WORK WITH ME?</span></h2>
@@ -214,7 +231,7 @@ const HomePage = () => {
               <p className="contact__availablity-text">Available for Work</p>
             </div>
           </div>
-            <c.ContactForm />
+          <c.ContactForm />
         </section>
       </div>
     </>
