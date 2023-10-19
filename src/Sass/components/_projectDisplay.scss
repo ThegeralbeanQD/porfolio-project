@@ -77,6 +77,11 @@
       width: 30px;
       line-height: 28px;
       text-align: center;
+      transition: all 200ms ease-out;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.351);
+      }
     }
   }
 
@@ -244,17 +249,30 @@
 &__btn {
   text-align: center;
   text-decoration: none;
-  color: v.$white-clr;
-  
+
   &.view {
     background-color: v.$primary-clr;
     padding: v.$lg-padding;
     width: clamp(150px, 40%, 200px);
+    color: v.$background-clr;
+
+    transition: all 200ms ease-out;
+
+    &:hover {
+      box-shadow: 0 0 10px #ffcf67;
+      transform: translateY(-3px);
+    }
   }
 
   &-image {
     max-height: 40px;
     font-size: 35px;
+
+    transition: all 200ms ease-out;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
 }
 }

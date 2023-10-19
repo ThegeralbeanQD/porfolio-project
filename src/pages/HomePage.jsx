@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-scroll";
 import * as c from "../components"
 
 const HomePage = () => {
@@ -46,13 +47,13 @@ const HomePage = () => {
         <div className="header__cta">
           <p className="header__cta-content">psychology graduate turned passionate software developer</p>
           <div className="header__cta-btn-wrapper container">
-            <button onClick={click} className="header__cta-btn header__cta-btn--primary">my work</button>
-            <button onClick={click} className="header__cta-btn header__cta-btn--secondary">Learn more</button>
+            <button className="header__cta-btn header__cta-btn--primary"><Link to='projects'>my work</Link></button>
+            <button onClick={click} className="header__cta-btn header__cta-btn--secondary"><Link to='bio'>Learn more</Link></button>
           </div>
         </div>
       </header>
 
-      <section className="featured">
+      <section className="featured" id="projects">
         <div className="container">
           <h2 className="featured__title">Featured Projects</h2>
           <c.ProjectDisplay
@@ -160,7 +161,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="bio">
+      <section className="bio" id="bio">
         <div className="container">
           <h2 className="bio__title">WHO IS GERALDINE</h2>
           <div className="bio__body">
@@ -195,25 +196,27 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="links">
-        <h4 className={linkTitleInView ? "links__title active" : "links__title"} ref={linkeTitleRef}>THIS SITE WAS MADE WITH</h4>
-        <div className="container">
-          <c.FanCard />
-        </div>
-      </section>
-
-      
-
-      <section className="contact">
-        <div className="container">
-          <h2 className="contact__title">WANT TO <span>WORK WITH ME?</span></h2>
-          <div className="contact__availablity">
-            <div className="contact__availablity-light"></div>
-            <p className="contact__availablity-text">Available for Work</p>
+      <div className="sticky-container">
+        <section className="links">
+          <h4 className={linkTitleInView ? "links__title active" : "links__title"} ref={linkeTitleRef}>THIS SITE WAS MADE WITH</h4>
+          <div className="container">
+            <c.FanCard />
           </div>
-        </div>
-          <c.ContactForm />
-      </section>
+        </section>
+  
+        
+  
+        <section className="contact" id="contact">
+          <div className="container">
+            <h2 className="contact__title">WANT TO <span>WORK WITH ME?</span></h2>
+            <div className="contact__availablity">
+              <div className="contact__availablity-light"></div>
+              <p className="contact__availablity-text">Available for Work</p>
+            </div>
+          </div>
+            <c.ContactForm />
+        </section>
+      </div>
     </>
   )
 }

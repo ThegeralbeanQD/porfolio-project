@@ -1,5 +1,6 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet} from 'react-router-dom'
 import { useState } from 'react'
+import { Link } from 'react-scroll';
 
 const NavBar = () => {
   const [active, setActive] = useState(false);
@@ -14,9 +15,9 @@ const NavBar = () => {
       >=</button>
       <nav className={active ? 'navbar active' : 'navbar'}>
         <ul className={active ? 'navbar__list navbar__list active' : 'navbar__list'}>
-          <li className='navbar__list-item'>Projects</li>
-          <li className='navbar__list-item navbar__list-item-deco'>About Me</li>
-          <li className='navbar__list-item'>Contact</li>
+          <li className='navbar__list-item'><Link smooth={false} to='projects' onClick={click}>Projects</Link></li>
+          <li className='navbar__list-item navbar__list-item-deco' onClick={click}><Link smooth={false} to='bio'>About Me</Link></li>
+          <li className='navbar__list-item'><Link smooth={false} to='contact' onClick={click}>Contact</Link></li>
         </ul>
       </nav>
       <Outlet />

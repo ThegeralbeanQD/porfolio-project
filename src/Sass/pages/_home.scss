@@ -160,10 +160,24 @@
 
       &--primary {
         background-color: v.$primary-clr;
+
+        transition: all 200ms ease-out;
+
+        &:hover {
+          box-shadow: 0 0 10px #ffcf67;
+          transform: translateY(-3px);
+        }
       }
 
       &--secondary {
         background-color: v.$white-clr;
+
+        transition: all 200ms ease-out;
+
+        &:hover {
+          box-shadow: 0 0 10px #ffffff;
+          transform: translateY(-3px);
+        }
       }
     }
   }
@@ -231,6 +245,23 @@
       border-radius: 10px;
       transform: translate(-50%, 0) scale(0);
       transition: all 200ms;
+    }
+
+    &::after {
+      content: '';
+      width: 130%;
+      height: 1px;
+      background-color: rgb(175, 175, 175);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      transition: all 200ms;
+    }
+
+    &:hover::after {
+      clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
     }
 
     &:hover::before {
@@ -332,6 +363,12 @@
       margin-block: v.$lg-margin;
       text-transform: uppercase;
 
+      transition: all 200ms ease-out;
+      &:hover {
+        box-shadow: 0 0 10px #ffcf67;
+        transform: translateY(-3px);
+      }
+
       @include b.md {
         order: 10;
         position: relative;
@@ -424,7 +461,9 @@
   margin-block: v.$lg-margin;
   padding: v.$lg-padding;
   background-color: v.$secondary-clr;
-  height: 400px;
+  height: 410px;
+  position: sticky;
+  top: 0;
 
   &__title {
     margin: 0 auto;
@@ -462,15 +501,21 @@
 }
 
 .contact {
-  margin-block: v.$lg-margin;
-  margin-bottom: 10rem;
+  position: sticky;
+  background-color: v.$background-clr;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-  & .container{
+  & .container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 
-    @include b.md{
+    @include b.md {
       align-items: center;
     }
   }
@@ -478,7 +523,8 @@
   &__title {
     & span {
       display: block;
-      @include b.md{
+
+      @include b.md {
         display: inline;
       }
     }
@@ -497,8 +543,10 @@
       width: 20px;
       height: 20px;
       background-color: rgb(11, 255, 7);
+      box-shadow: 0 0 10px rgb(120, 221, 118);
       border-radius: 50%;
       margin-right: v.$lg-margin;
+      animation: lightFlash 4s ease infinite;
     }
   }
 }
@@ -527,4 +575,25 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@keyframes lightFlash {
+  0% {
+    background-color: rgb(2, 113, 0);
+    box-shadow: 0 0 10px rgb(42, 78, 41)
+  }
+
+  50% {
+    background-color: rgb(11, 255, 7);
+    box-shadow: 0 0 10px rgb(120, 221, 118);
+  }
+
+  100% {
+    background-color: rgb(2, 113, 0);
+    box-shadow: 0 0 10px rgb(42, 78, 41)
+  }
+}
+
+.sticky-container {
+  position: relative;
 }

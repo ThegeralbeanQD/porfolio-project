@@ -15,6 +15,11 @@
     color: v.$white-clr;
     height: 250px;
 
+    &:focus{
+      outline: 1px v.$primary-clr solid;
+      box-shadow: 0 0 10px #d7be87;
+    }
+
     &-wraper{
       position: relative;
       & label{
@@ -37,6 +42,10 @@
     border: none;
     padding: 1.8rem 1rem;
     color: v.$white-clr;
+    &:focus{
+      outline: 1px v.$primary-clr solid;
+      box-shadow: 0 0 10px #d7be87;
+    }
 
     &-wraper{
       position: relative;
@@ -56,5 +65,11 @@
     color: v.$background-clr;
     padding: 1.8rem 1rem;
     margin-top: 0.5rem;
+    
+    transition: all 200ms ease-out;
+    &:hover {
+      box-shadow: 0 0 10px #ffcf67;
+      transform: translateY(-3px);
+    }
   }
 }
